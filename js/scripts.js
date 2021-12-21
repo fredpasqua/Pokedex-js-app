@@ -9,12 +9,15 @@ document.write("<br>");
 
 /*iterates through the pokemon array and prints the height of each
 and adds a line break.*/
+
 for (let i = 0; i < pokemonList.length; i++) {
-  document.write(pokemonList[i].name + '\'s' + ' height is ' +
-  pokemonList[i].height + '.');
+  var pokeName = pokemonList[i].name;
+  var pokeHeight = pokemonList[i].height;
+  document.write(pokeName + '\'s' + ' height is ' +
+  pokeHeight + '.');
 
 //checks the height and returns statement for large pokemon
-if (pokemonList[i].height >= 2) {
+if (pokeHeight >= 2) {
     document.write('  Wow, that\'s big!');
   }
 
