@@ -11,34 +11,31 @@ function add(pokemon) {
 function getAll() {
   return pokemonList;
 }
+
+/*Function to create add li elements with pokemon names from the pokemonList array
+and adds buttons to the li with the names.*/
+function addListItem(pokemon){
+  let pokemonList = document.querySelector('.pokemon-list');
+  let listpokemon = document.createElement("li");
+  let button = document.createElement("button");
+  button.innerText = pokemon.name;
+  button.classList.add('button-style');
+  listpokemon.appendChild(button);
+  pokemonList.appendChild(listpokemon);
+  button.addEventListener('click', function showDetails() {
+    console.log(pokemon.name);
+  });
+
+  };
+
 return {
   add: add,
-  getAll: getAll
+  getAll: getAll,
+  addListItem: addListItem
 };
 })();
 
-document.write('<h1>' + "How tall are they?" + '</h1>');
-document.write("<br></br>");
+pokemonRepository.getAll().forEach(function(pokemon) {
+  pokemonRepository.addListItem(pokemon);
 
-/* iterates through the pokemon array using the forEach Method and prints the
-name and height of each and adds a line break.  */
-pokemonRepository.getAll().forEach(function(item) {
-  var pokeName = item.name;
-  var pokeHeight = item.height;
-  document.write(pokeName + '\'s' + ' height is ' +
-  pokeHeight + '.');
-  document.write("<br></br>")
-});
-document.write("<hr>");
-
-
-/* A test of the ability to add a POKEMON to the array*/
-pokemonRepository.add({name: 'Fred', height: 5.11, type: ['javescript_noob']});
-
-/* test the ability to call new added item to the array*/
-pokemonRepository.getAll().forEach(function(item) {
-  var pokeName = item.name;
-  var pokeHeight = item.height;
-  document.write(pokeName + '\'s' + ' height is ' +
-  pokeHeight + '.' + '<br></br>');
 });
