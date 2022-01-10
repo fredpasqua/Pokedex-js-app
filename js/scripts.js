@@ -61,7 +61,8 @@ return {
   add: add,
   getAll: getAll,
   loadList: loadList,
-  loadDetails: loadDetails
+  loadDetails: loadDetails,
+  addListItem: addListItem
 };
 })();
 
