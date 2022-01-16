@@ -2,15 +2,28 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Pokedex Project</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <title>Pokedex</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="img/favicon-32X32.png">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <img class="logo" src="img/269px-International_Pok%C3%A9mon_logo.svg.png"  alt = "pokemon logo">
-
-    <ul class='pokemon-list'></ul>
+    <img class="logo2" src="img/pokedex2022.png" width='300' alt = "pokemondex logo">
+    <div class="pokedex-screen">
+      <ul class='pokemon-list'></ul>
+    </div>
   </div>
+  <div id='modal-container'></div>
+
   <script src="js/promise-polyfill.js"></script>
   <script src="js/scripts.js"></script>
 </body>
