@@ -30,11 +30,7 @@ function showModal(pokemon) {
   pokemonImage.classList.add('pokemon-modal-image');
   pokemonImage.src = pokemon.imageUrl;
 
-  /* TO DO:
-  let pokeType = document.createElement('p');
-  pokeType.innerText = ('Type = ' + pokemon.types);
-  pokeType.classList.add('modal-details');
-  */
+
 
   let pokeHeight = document.createElement('p');
   pokeHeight.innerText = ('Height = ' + pokemon.height);
@@ -44,11 +40,19 @@ function showModal(pokemon) {
   pokeWeight.innerText = ('Weight = ' + pokemon.weight);
   pokeWeight.classList.add('modal-details');
 
+  let alsoTypes = [];
+  pokemon.types.forEach((element) => {
+    alsoTypes.push(' ' + element.type.name)
+  })
+  let pokeTypes = document.createElement('p');
+  pokeTypes.innerText = ('Type(s) = ' + alsoTypes);
+  pokeTypes.classList.add('modal-details');
+
   modalContainer.appendChild(modal);
   modal.appendChild(closeButtonElement);
   modal.appendChild(pokeName);
   modal.appendChild(pokemonImage);
-  // TO DO-- modal.appendChild(pokeType);
+  modal.appendChild(pokeTypes);
   modal.appendChild(pokeWeight);
   modal.appendChild(pokeHeight);
 
@@ -78,8 +82,8 @@ modalContainer.addEventListener('click', (e) => {
   }
 });
 
-/*Function to create add <li> elements with pokemon names from the pokemonList array
-and adds buttons to the <li> with the names.*/
+/*Function to create add <li> elements with pokemon names from the pokemonList
+array and adds buttons to the <li> with the names.*/
 function addListItem(pokemon) {
   let listCreator = document.querySelector('.pokemon-list');
   let listItemCreator = document.createElement("li");
@@ -120,7 +124,7 @@ function loadDetails(item) {
   }).then(function (details) {
     //Add the details to the item
     item.imageUrl = details.sprites.front_default;
-    // TO DO--  item.types = details.types.type.name;
+    item.types = details.types;
     item.height = details.height;
     item.weight = details.weight;
   }).catch(function (e) {

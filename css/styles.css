@@ -9,19 +9,7 @@
   --white: #ffffff;
 }
 
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.9);
-    opacity: 20;
-  }
-  60% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 
 * {
   margin: 0;
@@ -146,6 +134,8 @@ align-self: center;
   max-width: 300px;
   min-height: 300px;
   text-align: center;
+  animation-duration: 300ms;
+  animation-name: fadeIn;
 }
 
 .modal-details {
