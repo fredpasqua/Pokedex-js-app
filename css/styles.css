@@ -14,7 +14,7 @@ body {
 }
 
 li {
-  padding: 2px;
+  padding: 1.5px;
 }
 
 
@@ -39,7 +39,7 @@ li {
 }
 
 .btn {
-  width: 100%;
+  width: 99%;
   text-transform:capitalize;
   font-size: 20px;
 }
