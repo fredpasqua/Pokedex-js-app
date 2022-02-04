@@ -11,77 +11,55 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 </head>
 <body>
-<!--Navigation bar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img src="img/pokedex2022.png" alt="PokeDex2022 Logo" height=40 width=150></a>
+  <a class="navbar-brand" href="index.html"><img src="img/pokedex2022.png" alt="PokeDex2022 Logo" height=40 width=150></a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav" "mr-auto">
-      <div class="searchBar"><input onfocus=this.value='' type="text" placeholder="Search Pokemon..."
-      id='pokeInput' onkeyup="pokemonRepository.pokeSearch(this.value)"></div>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
       </li>
-
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/fredpasqua/Pokedex-js-app/" target="_blank">Code</a>
+      </li>
     </ul>
   </div>
 </nav>
 
-<!-- Modal Code -->
-<div class="modal fade" id="pokeModal" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="modal-title"></div>
-        <button type="button" class="close"
-        data-dismiss="pokeModal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
+<div class = "about">
+  <h1>About</h1>
 
-    </div>
-    <div class="modal-footer">
-      <button type="button" class= "btn btn-secondary"
-      data-dismiss="modal">Close</button>
-    </div>
-  </div>
-</div>
-</div>
-
-<!--CONTAINER FOR POKEMON LIST-->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col"></div>
-    <div class="col-10"><ul class='list-group' id='pokemon-list'></ul></div>
-    <div class="col"></div>
-  </div>
-</div>
-
-<!--Container for Footer elements and future use-->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col"></div>
-     <div class="col"><img src="img/PokemonLogo.png" class="img-fluid" id="pokeLogo" alt="pokemon logo"></div>
-    <div class="col"></div>
-  </div>
-</div>
-
-<footer class ="container-fluid" >
-  <div class="row">
-  <div class="col"></div>
-</div>
-</footer>
+  <p>This project was part of the CareerFoundy Javacript section in the full stack
+    developer course.</p>
+    <p>The project was to create a PokeDex which loads data from an external source(API)
+      and returns the data to the user.</p>
+      <div>
+        <h2>The Project Requirements</h2><ul>
+          <li>The App displays a list of items loaded from the<a href = "https://pokeapi.co/" target="_blank"> Pokemon API </a></li>
+          <li>The user can view more details by clicking on the name of a Pokemon in the list.</li>
+          <li>The App had to have CSS styling</li>
+          <li>The JavaScript code was formatted according to ESLint rules and was checked against
+          the linter in Atom, which I did manually.</li>
+          <li>The app also uses a modal, which was created utilizing the Bootstrap Library.</li>
+          <li>Other Bootstrap libray elements were used in the creation of the app including the
+            Navbar.</li>
+            <li>The App also allows the user to search via text input the list to filter the list.</li>
+            <li>The App works in all major browsers and is responsive.</li>
+            <li>I also used some jQuery in the script page as well as AJAX to fetch the data.</li>
+            <li>Color scheme from the original Pokemon Series was used and logos were created
+              in Poke style.</li></ul>
+            </div>
+          </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-	<script src="dist/script-minified.js"></script>
+  <script src="dist/script-minified.js"></script>
+
 </body>
 </html>

@@ -17,6 +17,20 @@ li {
   padding: 1.5px;
 }
 
+.about p, ul {
+  display: block;
+  margin: 20px;
+}
+
+.listgroup ul {
+  padding: 0;
+}
+
+.about h1, h2{
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
 
 .col {

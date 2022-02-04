@@ -10,28 +10,28 @@ function getAll() {
 }
 //function to populate the bootstrap modal w/ content from loadDetails Func.
 function showModal(pokemon) {
-  let modalBody = $(".modal-body");
-  let modalTitle = $(".modal-title");
-  let modalHeader = $(".modal-header");
+  let modalBody = $('.modal-body');
+  let modalTitle = $('.modal-title');
+  let modalHeader = $('.modal-header');
 
   // clear existing content of the modalBody
   modalHeader.empty();
   modalTitle.empty();
   modalBody.empty();
   //creating element for name in modal content
-  let nameElement = $("<h1>" + pokemon.name.toUpperCase() + "</h1>");
+  let nameElement = $('<h1>' + pokemon.name.toUpperCase() + '</h1>');
   // create img in modal content
-  let imageElement = $("<img class='modal-img' style=width:40%>");
-  imageElement.attr("src", pokemon.imageUrl);
-  let heightElement = $("<p>" + "height : " + pokemon.height + "</p>");
-  let weightElement = $("<p>" + "weight : " + pokemon.weight + "</p>");
+  let imageElement = $('<img class="modal-img" style=width:40%>');
+  imageElement.attr('src', pokemon.imageUrl);
+  let heightElement = $('<p>' + 'height : ' + pokemon.height + '</p>');
+  let weightElement = $('<p>' + 'weight : ' + pokemon.weight + '</p>');
   // get both types if both exist, add to array alsoTypes
   let alsoTypes = [];
    pokemon.types.forEach((element) => {
      alsoTypes.push(' ' + element.type.name)
    })
    //create element for types
-  let typesElement = $("<p>" + "type(s) : " + alsoTypes + "<p>");
+  let typesElement = $('<p>' + 'type(s) : ' + alsoTypes + '<p>');
   //Append Variable to the bootstrap modalBody
   modalHeader.append(nameElement);
   modalBody.append(imageElement);
@@ -44,7 +44,7 @@ function showModal(pokemon) {
 that match user input*/
 function pokeSearch(value) {
 //Clear the list when any value is added to the INPUT
-document.getElementById('pokemon-list').innerHTML="";
+document.getElementById('pokemon-list').innerHTML='';
 
 /*iterate over the pokemonList and check if the value is found
 if true; run the addListItem function to add the name to the UL on the page*/
@@ -55,19 +55,18 @@ pokemonList.forEach((pokemon) => {
     })
   }
 
-
 /*Function to create AND add <li> elements with pokemon names from the pokemonList
 array and adds buttons to the <li> with the names.*/
 function addListItem(pokemon) {
 
   let listCreator = document.querySelector('.list-group');
   listCreator.classList.add('list-unstyled')
-  let listItemCreator = document.createElement("li");
+  let listItemCreator = document.createElement('li');
   listItemCreator.classList.add('group-list-item');
-  let button = document.createElement("button");
+  let button = document.createElement('button');
   button.classList.add('btn', 'btn-primary');
-  button.setAttribute('data-toggle', "modal");
-  button.setAttribute('data-target', "#pokeModal")
+  button.setAttribute('data-toggle', 'modal');
+  button.setAttribute('data-target', '#pokeModal')
   button.innerText = pokemon.name;
   listCreator.appendChild(listItemCreator);
   listItemCreator.appendChild(button);
@@ -118,6 +117,7 @@ return {
   loadDetails: loadDetails,
   addListItem: addListItem,
   pokeSearch: pokeSearch,
+
 };
 })();
 
