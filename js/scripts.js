@@ -1,7 +1,7 @@
 //Creates a IIFE protected repository for POKEMON for the PokeDex project//
 let pokemonRepository = (function () {
 let pokemonList = [];
-let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=1000';
+let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=200';
 function add(pokemon) {
   pokemonList.push(pokemon);
 }
@@ -21,22 +21,22 @@ function showModal(pokemon) {
   //creating element for name in modal content
   let nameElement = $('<h1>' + pokemon.name.toUpperCase() + '</h1>');
   // create img in modal content
-  let imageElement = $('<img class="modal-img" style=width:40%>');
+  let imageElement = $('<img class="modal-img  w-100" style="height:225px;max-width: 225px;"> ');
   imageElement.attr('src', pokemon.imageUrl);
-  let heightElement = $('<p>' + 'height : ' + pokemon.height + '</p>');
-  let weightElement = $('<p>' + 'weight : ' + pokemon.weight + '</p>');
+  let heightWeightElement = $('<p>' + 'Height: ' + pokemon.height + ',   '+ 'Weight: ' + pokemon.weight + '</p>');
+  //let weightElement = $('<p>'  + '</p>');
   // get both types if both exist, add to array alsoTypes
   let alsoTypes = [];
    pokemon.types.forEach((element) => {
      alsoTypes.push(' ' + element.type.name)
    })
    //create element for types
-  let typesElement = $('<p>' + 'type(s) : ' + alsoTypes + '<p>');
+  let typesElement = $('<p>' + 'Type(s) : ' + alsoTypes + '<p>');
   //Append Variable to the bootstrap modalBody
   modalHeader.append(nameElement);
   modalBody.append(imageElement);
-  modalBody.append(heightElement);
-  modalBody.append(weightElement);
+  modalBody.append(heightWeightElement);
+  //modalBody.append(weightElement);
   modalBody.append(typesElement);
 }
 
@@ -44,8 +44,7 @@ function showModal(pokemon) {
 that match user input*/
 function pokeSearch(value) {
 //Clear the list when any value is added to the INPUT
-document.getElementById('pokemon-list').innerHTML='';
-
+$('#pokemon-list').empty();
 /*iterate over the pokemonList and check if the value is found
 if true; run the addListItem function to add the name to the UL on the page*/
 pokemonList.forEach((pokemon) => {
