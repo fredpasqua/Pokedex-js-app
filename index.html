@@ -6,9 +6,9 @@
   <title>Pokedex</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
   	 crossorigin="anonymous">
-  <link rel="stylesheet" href="dist/styles.css">
   <link rel="icon" type="image/png" href="img/favicon-32X32.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="dist/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -22,15 +22,18 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav" "mr-auto">
-      <div class="searchBar"><input onfocus=this.value='' type="text" placeholder="Search Pokemon..."
-      id='pokeInput' onkeyup="pokemonRepository.pokeSearch(this.value)"></div>
+    <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://fredpasqua.github.io/portfolio-website-new-main/work">Portfolio<span
+            class="sr-only">(current)</span></a>
+      </li>
 
     </ul>
-  </div>
+    <input class="searchBar" onfocus=this.value='' type="text" placeholder="Search Pokemon..." id='pokeInput'
+      onkeyup="pokemonRepository.pokeSearch(this.value)"></div>
 </nav>
 
 <!-- Modal Code -->
