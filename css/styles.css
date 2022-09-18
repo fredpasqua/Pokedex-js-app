@@ -103,3 +103,12 @@ li {
 .modal-footer button:hover {
   background-color: var(--darkblue);
 }
+
+.searchBar {
+  border: 10px var(--yellow) solid;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}

@@ -32,8 +32,7 @@
       </li>
 
     </ul>
-    <input class="searchBar" onfocus=this.value='' type="text" placeholder="Search Pokemon..." id='pokeInput'
-      onkeyup="pokemonRepository.pokeSearch(this.value)"></div>
+  </div>
 </nav>
 
 <!-- Modal Code -->
@@ -55,6 +54,9 @@
 
 <!--CONTAINER FOR POKEMON LIST-->
 <div class="container-fluid">
+  <input class="searchBar" onfocus=this.value='' type="text" placeholder="Search Pokemon..." id='pokeInput'
+    onkeyup="pokemonRepository.pokeSearch(this.value)">
+
   <div class="row">
     <div class="col"></div>
     <div class="col-10"><ul class='list-group' id='pokemon-list'></ul></div>
